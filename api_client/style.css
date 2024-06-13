@@ -52,3 +52,10 @@ li{
 .completato{
     color: blue;
 }
+
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}

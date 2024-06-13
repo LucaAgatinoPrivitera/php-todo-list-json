@@ -26,10 +26,10 @@
                             <input type="checkbox" v-model="singleTask.completato" />
                         </li>
                         <li>
-                            <input type="text" placeholder="nuova task" v-model="addText"
-                                @keyup.enter="print(singleToDo.compiti)">
-                                <!-- Da chiedere il v-model -->
-                            <button @click="print(singleToDo.compiti)">Invia</button>
+                            <!-- MODIFICA IL VALORE DOVREBBE CAMBIARE CLASSE -->
+                            <input class="hidden" :class="{visible: singleToDo.add}" type="text"
+                                placeholder="nuova task" v-model="addText" @keyup.enter="print(singleToDo.compiti)">
+                            <button @click="print(singleToDo.compiti), prova(singleToDo.add)">Invia</button>
                         </li>
                     </ul>
                 </li>

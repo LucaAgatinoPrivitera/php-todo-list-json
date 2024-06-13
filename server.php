@@ -2,41 +2,47 @@
 
 $toDo = [
     [
+        'add' => false,
         'giorno' => 'Lunedì',
         'compiti' => [
             [
+
                 'descrizione' => 'fare i progetti',
-                'completato' => true
+                'completato' => true,
             ],
             [
                 'descrizione' => 'mangiare',
-                'completato' => false
+                'completato' => false,
             ]
         ]
     ],
     [
+        'add' => false,
         'giorno' => 'Martedì',
         'compiti' => [
             [
+
                 'descrizione' => 'fare i progetti',
-                'completato' => false
+                'completato' => false,
             ],
             [
                 'descrizione' => 'dormire',
-                'completato' => false
+                'completato' => false,
             ]
         ]
     ],
     [
+        'add' => false,
         'giorno' => 'Mercoledì',
         'compiti' => [
             [
+
                 'descrizione' => 'fare i progetti',
-                'completato' => false
+                'completato' => false,
             ],
             [
                 'descrizione' => 'cenare',
-                'completato' => false
+                'completato' => false,
             ]
         ]
     ],

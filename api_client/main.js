@@ -21,6 +21,13 @@ createApp({
       }
 
     },
+    prova(indice){
+      console.log(indice)
+      // da chiedere perché non mi salva il dato
+      indice = !indice;
+      console.log("indice")
+      console.log(indice)
+    }
 
   },
   // Mounted significa al mount della pagina
