@@ -32,6 +32,23 @@ h3 {
     text-decoration: line-through;
 }
 
+li{
+    margin-bottom: 0.3rem;
+    
+}
 #giorno {
     margin-bottom: 2rem;
+    margin-left: unset;
+    font-size: 1.6rem;
+    list-style-type: none;
+
+}
+
+#giorno * {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.completato{
+    color: blue;
 }
