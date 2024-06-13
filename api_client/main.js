@@ -21,12 +21,12 @@ createApp({
       }
 
     },
-    prova(indice){
-      console.log(indice)
+    prova(singleToDo){
+      console.log(singleToDo)
       // da chiedere perché non mi salva il dato
-      indice = !indice;
+      singleToDo.add = !singleToDo.add;
       console.log("indice")
-      console.log(indice)
+      console.log(singleToDo)
     }
 
   },

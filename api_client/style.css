@@ -57,5 +57,11 @@ li{
     display: none;
 }
 .visible{
-    display: block;
+    display: flex;
+}
+.flex{
+    display: flex;
+}
+.flex *{
+    display: flex;
 }
