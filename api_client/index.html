@@ -26,6 +26,11 @@
                             <!-- Da chiedere ma questo cambia da true a false al click? -->
                             <input type="checkbox" v-model="singleTask.completato" />
                         </li>
+                        <li>
+                            <input type="text" placeholder="nuova task" v-model="addText"
+                                @click="print(singleToDo.compiti)">
+                            <button @click="print(singleToDo.compiti)">Invia</button>
+                        </li>
 
                     </ul>
                 </li>
