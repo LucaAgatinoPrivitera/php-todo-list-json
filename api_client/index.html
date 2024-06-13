@@ -13,12 +13,21 @@
 <body>
 
     <div id="app">
+        <div class="container">
+            <h1>Benvenuto, <span class="crossed">non funziona niente</span>  queste sono le tue task</h1>
 
-        <h1>Benvenuto, non funziona niente</h1>
+            <ul>
+                <li id="giorno" v-for="(singleToDo) in toDo">
+                    {{ singleToDo.giorno }}:
+                    <ul>
+                        <li v-for="(singleTask) in singleToDo.compiti">
+                            {{ singleTask }}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-        <ul>
-            <li v-for="singleToDo, i in toDo">{{ singleToDo[i] }}</li>
-        </ul>
 
     </div>
 

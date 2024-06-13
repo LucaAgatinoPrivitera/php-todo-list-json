@@ -22,3 +22,16 @@ h2,
 h3 {
     margin: 1rem 0;
 }
+
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+.crossed {
+    text-decoration: line-through;
+}
+
+#giorno {
+    margin-bottom: 2rem;
+}

@@ -2,16 +2,17 @@
 
 $toDo = [
     [
-        'name',
-        'last_name'
+        'giorno' => 'Lunedì',
+        'compiti' => ['fare i progetti', 'mangiare']
+
     ],
     [
-        'name' => 'Giovanna',
-        'last_name' => 'Bianchi'
+        'giorno' => 'Martedì',
+        'compiti' => ['fare i progetti', 'dormire']
     ],
     [
-        'name' => 'Giuseppe',
-        'last_name' => 'Verdi'
+        'giorno' => 'Mercoledì',
+        'compiti' => ['fare i progetti', 'cenare']
     ],
 ];
 
