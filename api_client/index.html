@@ -17,7 +17,7 @@
         <h1>Benvenuto, non funziona niente</h1>
 
         <ul>
-            <li v-for="student in students">{{ student.name }}</li>
+            <li v-for="singleToDo, i in toDo">{{ singleToDo[i] }}</li>
         </ul>
 
     </div>

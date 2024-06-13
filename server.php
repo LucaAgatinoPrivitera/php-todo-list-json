@@ -1,9 +1,9 @@
 <?php
 
-$students = [
+$toDo = [
     [
-        'name' => 'Mario',
-        'last_name' => 'Rossi'
+        'name',
+        'last_name'
     ],
     [
         'name' => 'Giovanna',
@@ -17,6 +17,7 @@ $students = [
 
 header('Content-Type: application/json');
 
-$jsonString = json_encode($students);
-
+// Trasforma $toDo in stringa, capibile anche per PHP
+$jsonString = json_encode($toDo);
+// Da chiedere, Output della stringa comprensibile per PHP, ma non dovrei usare un altro metodo per convertire la stringa in un array? su js si usava stringfy e un altro metodo
 echo $jsonString;
