@@ -17,27 +17,24 @@
             <h1>Benvenuto, <span class="crossed">non funziona niente</span> queste sono le tue task</h1>
 
             <ul>
-                <li id="giorno" v-for="singleToDo in toDo">
+                <li id="giorno" v-for="(singleToDo, index) in toDo" :key="index">
                     {{ singleToDo.giorno }}:
                     <ul>
-
-                        <li :class="{ crossed: singleTask.completato }" v-for="singleTask in singleToDo.compiti">
+                        <li :class="{ crossed: singleTask.completato }"
+                            v-for="(singleTask, taskIndex) in singleToDo.compiti" :key="taskIndex">
                             {{ singleTask.descrizione }}
-                            <!-- Da chiedere ma questo cambia da true a false al click? -->
                             <input type="checkbox" v-model="singleTask.completato" />
                         </li>
                         <li>
                             <input type="text" placeholder="nuova task" v-model="addText"
-                                @click="print(singleToDo.compiti)">
+                                @keyup.enter="print(singleToDo.compiti)">
+                                <!-- Da chiedere il v-model -->
                             <button @click="print(singleToDo.compiti)">Invia</button>
                         </li>
-
                     </ul>
                 </li>
             </ul>
         </div>
-
-
     </div>
 
     <script src="./main.js"></script>
