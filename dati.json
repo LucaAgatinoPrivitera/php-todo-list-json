@@ -1,0 +1,22 @@
+[
+    {
+        "compiti": "progettare",
+        "completato": false,
+        "add": false
+    },
+    {
+        "compiti": "mangiare",
+        "completato": true,
+        "add": false
+    },
+    {
+        "compiti": "pulire casa",
+        "completato": false,
+        "add": false
+    },
+    {
+        "compiti": "leggere",
+        "completato": true,
+        "add": false
+    }
+]
