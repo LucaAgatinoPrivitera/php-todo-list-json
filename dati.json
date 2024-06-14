@@ -1,10 +1,1 @@
-[
-    {
-        "compiti": [
-            "progettare",
-            "mangiare"
-        ],
-        "completato": false,
-        "add": false
-    }
-]
+[{"compiti":["progettare","mangiare","32","32","32","32","ciao","32","32p"],"completato":false,"add":false}]

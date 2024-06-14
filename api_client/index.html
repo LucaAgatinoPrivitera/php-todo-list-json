@@ -48,7 +48,7 @@
                 </ul>
 
                 <div :class="{visible: singleToDo.add}">
-                    <input placeholder="Aggiungi la nuova task" v-model="newCompiti" />
+                    <input placeholder="Aggiungi la nuova task" v-model="newCompiti" @keyup.enter="addTask()" />
                     <button :class="{visible: singleToDo.add}" @click="addTask()">Invia</button>
                 </div>
             </div>
