@@ -7,6 +7,7 @@ createApp({
       toDo: [],
       addText: "",
       newTask: "",
+      newCompiti: "",
       apiUrl: "../list.php",
       postRequestConfig: {
         headers: {
@@ -64,7 +65,7 @@ createApp({
         completato: false
       };
 
-      axios.post(this.apiUrl, newTask, this.postRequestConfig).then(results => {
+      axios.post("../api.php", newTask, this.postRequestConfig).then(results => {
         console.log("Risultati: ", results.data);
         this.toDo = results.data;
         console.log("Risultati: ", this.toDo[index]);

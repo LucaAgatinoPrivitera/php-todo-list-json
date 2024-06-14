@@ -40,30 +40,22 @@
             </ul> -->
 
 
+            <div v-for="(singleToDo, index) in toDo" :key="index">
+                <ul>
+                    <li v-for="(singleTask, taskIndex) in singleToDo.compiti">
+                        {{singleTask}}
+                    </li>
+                </ul>
+
+                <div :class="{visible: singleToDo.add}">
+                    <input placeholder="Aggiungi la nuova task" v-model="newCompiti" />
+                    <button :class="{visible: singleToDo.add}" @click="addTask()">Invia</button>
+                </div>
+            </div>
 
 
 
-            <ul>
-                <li id="giorno" v-for="(singleToDo, index) in toDo" :key="index">
-                    {{ singleToDo.giorno }}:
-                    <ul>
-                        <li :class="{ crossed: singleToDo.completato }"
-                            v-for="(singleTask, taskIndex) in singleToDo.compiti" :key="taskIndex">
-                            {{ singleTask }}
-                            <input type="checkbox" v-model="singleTask.completato" />
-                        </li>
-                        <li>
-                            <div :class="{visible: singleToDo.add}">
-                                <input placeholder="Aggiungi la nuova task" v-model="newTask" />
-                                <button :class="{visible: singleToDo.add}"
-                                    @click="addTask(index)">Invia</button>
-                            </div>
 
-
-                        </li>
-                    </ul>
-                </li>
-            </ul>
 
 
         </div>

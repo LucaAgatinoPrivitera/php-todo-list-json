@@ -1,41 +1,10 @@
 [
     {
-        "giorno": "Lunedì",
         "compiti": [
             "progettare",
             "mangiare"
         ],
         "completato": false,
-        "add": false
-    },
-    {
-        "giorno": "Martedì",
-        "compiti": [
-            "progettare",
-            "mangiare",
-            "impazzimento post progetto"
-        ],
-        "completato": true,
-        "add": false
-    },
-    {
-        "giorno": "Mercoledì",
-        "compiti": [
-            "progettare",
-            "mangiare",
-            "dormire"
-        ],
-        "completato": false,
-        "add": false
-    },
-    {
-        "giorno": "Giovedì",
-        "compiti": [
-            "progettare",
-            "mangiare",
-            "allenarsi"
-        ],
-        "completato": true,
         "add": false
     }
 ]
