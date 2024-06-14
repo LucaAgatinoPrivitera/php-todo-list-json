@@ -1,21 +1,40 @@
 [
     {
-        "compiti": "progettare",
+        "giorno": "Lunedì",
+        "compiti": [
+            "progettare",
+            "mangiare"
+        ],
         "completato": false,
         "add": false
     },
     {
-        "compiti": "mangiare",
+        "giorno": "Martedì",
+        "compiti": [
+            "progettare",
+            "mangiare",
+            "impazzimento post progetto"
+        ],
         "completato": true,
         "add": false
     },
     {
-        "compiti": "pulire casa",
+        "giorno": "Mercoledì",
+        "compiti": [
+            "progettare",
+            "mangiare",
+            "dormire"
+        ],
         "completato": false,
         "add": false
     },
     {
-        "compiti": "leggere",
+        "giorno": "Giovedì",
+        "compiti": [
+            "progettare",
+            "mangiare",
+            "allenarsi"
+        ],
         "completato": true,
         "add": false
     }

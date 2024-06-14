@@ -6,7 +6,7 @@ createApp({
     return {
       toDo: [],
       addText: "",
-      newCompiti: "",
+      newTask: "",
       apiUrl: "../list.php",
       postRequestConfig: {
         headers: {
@@ -56,7 +56,7 @@ createApp({
 
     },
 
-    addTask() {
+    addTask(index) {
       console.log("aggiungi task", this.newTask);
 
       const newTask = {
@@ -67,6 +67,7 @@ createApp({
       axios.post(this.apiUrl, newTask, this.postRequestConfig).then(results => {
         console.log("Risultati: ", results.data);
         this.toDo = results.data;
+        console.log("Risultati: ", this.toDo[index]);
       });
     }
 
@@ -76,11 +77,6 @@ createApp({
   mounted() {
     console.log("Recupero i dati dal server");
 
-    // axios.get("../list.php").then(results, function (results) sarebbe la stessa cosa senza AF 
-    axios.get("../list.php").then(results => {
-      console.log("Risultati: ", results.data);
-      this.toDo = results.data;
-    });
     this.getTasksList();
   }
 }).mount('#app')
