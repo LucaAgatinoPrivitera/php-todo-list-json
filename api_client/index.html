@@ -34,10 +34,19 @@
                                     @click="print(singleToDo.compiti), prova(index)">Invia</button>
                             </div>
 
+                            <div>
+                                <input placeholder="Cognome" v-model="newTask" />
+                                <button :class="{visible: singleToDo.add}"
+                                    @click="print(singleToDo.compiti), prova(index)">Invia</button>
+                            </div>
+
+
                         </li>
                     </ul>
                 </li>
             </ul>
+
+            
         </div>
     </div>
 

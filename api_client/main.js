@@ -6,6 +6,13 @@ createApp({
     return {
       toDo: [],
       addText: "",
+      newCompiti: "",
+      apiUrl: "../list.php",
+      postRequestConfig: {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }
     }
   },
   methods: {
@@ -35,17 +42,45 @@ createApp({
       },)
 
       this.toDo[singleToDo].add = !this.toDo[singleToDo].add;
+    },
+
+
+    // DAY 2
+
+    getTasksList() {
+
+      axios.get(this.apiUrl).then(results => {
+        console.log("Risultati: ", results.data);
+        this.toDo = results.data;
+      });
+
+    },
+
+    addTask() {
+      console.log("aggiungi task", this.newTask);
+
+      const newTask = {
+        compiti: this.newCompiti,
+        completato: false
+      };
+
+      axios.post(this.apiUrl, newTask, this.postRequestConfig).then(results => {
+        console.log("Risultati: ", results.data);
+        this.toDo = results.data;
+      });
     }
+
 
   },
   // Mounted significa al mount della pagina
   mounted() {
     console.log("Recupero i dati dal server");
 
-    // axios.get("../server.php").then(results, function (results) sarebbe la stessa cosa senza AF 
-    axios.get("../server.php").then(results => {
-      console.log("Risultati: ", results);
+    // axios.get("../list.php").then(results, function (results) sarebbe la stessa cosa senza AF 
+    axios.get("../list.php").then(results => {
+      console.log("Risultati: ", results.data);
       this.toDo = results.data;
     });
+    this.getTasksList();
   }
 }).mount('#app')
