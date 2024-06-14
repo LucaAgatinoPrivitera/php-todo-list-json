@@ -21,12 +21,20 @@ createApp({
       }
 
     },
-    prova(singleToDo){
-      console.log(singleToDo)
+    prova(singleToDo) {
+      // console.log(singleToDo)
       // da chiedere perché non mi salva il dato
-      singleToDo.add = !singleToDo.add;
-      console.log("indice")
-      console.log(singleToDo)
+      // singleToDo = !singleToDo;
+      // console.log("indice")
+      // console.log(singleToDo)
+      console.log(this.toDo[singleToDo].add)
+
+      // Reset ad ogni click, quell'item sarebbe un singletodo ma richiamato col foreach di js
+      this.toDo.forEach(item => {
+        item.add = false;
+      },)
+
+      this.toDo[singleToDo].add = !this.toDo[singleToDo].add;
     }
 
   },

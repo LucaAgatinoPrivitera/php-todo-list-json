@@ -27,11 +27,11 @@
                         </li>
                         <li>
                             <!-- MODIFICA IL VALORE DOVREBBE CAMBIARE CLASSE -->
-                            <div class="flex">
+                            <div :class="{visible: singleToDo.add}">
                                 <input class="hidden" :class="{visible: singleToDo.add}" type="text"
                                     placeholder="nuova task" v-model="addText" @keyup.enter="print(singleToDo.compiti)">
                                 <button :class="{visible: singleToDo.add}"
-                                    @click="print(singleToDo.compiti), prova(singleToDo)">Invia</button>
+                                    @click="print(singleToDo.compiti), prova(index)">Invia</button>
                             </div>
 
                         </li>
